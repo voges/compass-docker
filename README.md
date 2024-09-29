@@ -1,6 +1,6 @@
 # Docker Setup for Compass
 
-We provide a Docker setup that provides [Compass](https://github.com/YosefLab/Compass).
+This is a Docker setup that provides [Compass](https://github.com/YosefLab/Compass).
 
 ## Prerequisites
 
