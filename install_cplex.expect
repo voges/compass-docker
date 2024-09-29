@@ -1,0 +1,35 @@
+#!/usr/bin/expect -f
+
+# Disable timeout
+set timeout -1
+
+# Start the installer
+spawn ./cplex_studio2211.linux_x86_64.bin
+
+# Simulate user inputs
+expect "CHOOSE LOCALE BY NUMBER:"
+send "2\r"
+
+expect "PRESS <ENTER> TO CONTINUE:"
+send "\r"
+
+expect "to the previous screen.:"
+send "1\r"
+
+expect ":"
+send "\r"
+
+expect "PRESS <ENTER> TO INSTALL:"
+send "\r"
+
+expect "PRESS <ENTER> TO CONTINUE:"
+send "\r"
+
+expect "PRESS <ENTER> TO CONTINUE:"
+send "\r"
+
+expect "PRESS <ENTER> TO EXIT THE INSTALLER:"
+send "\r"
+
+# Wait for the installation to complete
+expect eof
