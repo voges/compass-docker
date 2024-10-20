@@ -7,19 +7,33 @@ This is a Docker setup that provides [Compass](https://github.com/YosefLab/Compa
 - Docker installed on your system. You can download and install Docker from [here](https://docs.docker.com/get-docker/).
 - The Cplex installer `cplex_studio2211.linux_x86_64.bin`, placed in this directory. You are legally required to obtain your own copy of the Cplex Installer from IBM. Detailed instructions for downloading the Cplex installer from IBM are provided below.
 
-## Steps to Install Compass
+## Install Compass
 
-1. Build the Docker image using the provided [`Dockerfile`](Dockerfile):
+Build the Docker image using the provided [`Dockerfile`](Dockerfile):
 
-    ```sh
-    docker build -t compass .
-    ```
+```sh
+docker build --tag compass .
+```
 
-2. Run the Docker container:
+## Run Compass
 
-    ```sh
-    docker run compass
-    ```
+Run the Docker container to verify the installation:
+
+```sh
+docker run compass
+```
+
+By default, Docker containers do not have access to files from your host system.
+You need to mount a directory from your host into the container with the `-v|--volume` option to interact with files from your host system.
+
+For example, if the input file `expression.tsv` is in the `data` directory:
+
+```sh
+docker run --volume $(pwd)/data:/data compass \
+    --data /data/expression.tsv \
+    --species homo_sapiens \
+    --output-dir /data
+```
 
 ## Instructions for Downloading the Cplex Installer from IBM SkillsBuild
 
