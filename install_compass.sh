@@ -6,8 +6,8 @@ python3 -m venv "${VENV_NAME}"
 # shellcheck disable=SC1091
 source "${VENV_NAME}/bin/activate"
 
-# Install gdown.
-pip3 install gdown
+# Install Python dependencies.
+pip3 install --requirement requirements.txt
 
 # Download the Cplex installer 'cplex_studio2211.linux_x86_64.bin'.
 # You are legally required to obtain your own copy of the Cplex Installer from IBM!
