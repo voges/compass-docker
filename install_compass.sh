@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 # Set up virtual environment.
-VENV_NAME=".venv"
-python3 -m venv "${VENV_NAME}"
+python3 -m venv .venv
 # shellcheck disable=SC1091
-source "${VENV_NAME}/bin/activate"
+source ".venv/bin/activate"
 
 # Install Python dependencies.
 pip3 install --requirement requirements.txt
