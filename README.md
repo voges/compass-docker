@@ -27,7 +27,7 @@ By default, Docker containers do not have access to files from your host system.
 You need to mount a directory from your host into the container with the `-v|--volume` option to interact with files from your host system.
 Also, to able to access any files created within the container, the container must be executed with your local user and group IDs.
 
-For example, the following command runs Compass with the input file [`expression.tsv`](expression.tsv) from the [`data`](data/) directory:
+For example, the following command runs Compass with the input file [`expression.tsv`](data/expression.tsv) from the [`data`](data/) directory:
 
 ```sh
 docker run --rm \
