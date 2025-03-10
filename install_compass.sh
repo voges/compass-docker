@@ -5,13 +5,6 @@ python3 -m venv .venv
 # shellcheck disable=SC1091
 source ".venv/bin/activate"
 
-# Install Python dependencies.
-pip3 install --requirement requirements.txt
-
-# Download the Cplex installer 'cplex_studio2211.linux_x86_64.bin'.
-# You are legally required to obtain your own copy of the Cplex Installer from IBM!
-gdown 1RxuYxj4r42x8egAoRcjmjhj7HzDkuSrl
-
 # Install Cplex and its Python API.
 CPLEX_INSTALLER="cplex_studio2211.linux_x86_64.bin"
 CPLEX_INSTALL_DIR="cplex_studio2211"
